@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+body{
+    background-color: #F1F1F1;
+    font-family: 'Inter', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: white;
+    padding: 12px  16px 12px 16px;
+}
+
+.collection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.bell{
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+    background:  #303030;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user{
+    padding: 2px 2px 2px 8px; 
+    background: #303030;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 5px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.bell:hover,.user:hover{
+    background-color: #616161;
+}
+.bell:active,.user:active{
+    background-color: #616161;
+}
+
+.user-icon{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    background: #36FBA1;
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    color: #000;
+    margin-left: 5px;
+    
+}
+
+.search input{
+    width: 480px;
+    height: 32px;
+    outline-color:1px solid white ;
+    border: 1px solid #616161;
+    padding-left: 2.4rem;
+   font-weight: 500;
+    background-color: #303030;
+    border-radius: 8px;
+    color: white;
+    
+}
+.search input:hover{
+    border: 1px solid white;
+}
+
+.search{
+    position: relative;
+}
+
+.search-icon{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.7rem;
+    color: #B5B5B5;
+}
+.modal{
+    width: 383px;
+    height: 118px;
+    position: absolute;
+    top: 13%;
+    right: 1rem;
+        border-radius: 14px;   
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #DBDBDB;
+    display: none;
+}
+.show-links{
+    display: block;
+}
+.modal-sub{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+.modal-icon{
+    display: flex;
+    gap: 16px;
+}
+.modal-info{
+    background-color: #F1F1F1;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 1rem;
+   
+}
+
+.modal-2{
+    width: 320px;
+    
+    position: absolute;
+    top: 13%;
+    right: 1rem;
+        border-radius: 14px;   
+    background-color: white;
+   
+    border: 1px solid #DBDBDB;
+    display: none;
+}
+.show-modal2{
+    display: block;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F1F1F1;
+    padding: 4px 12px 4px 8px;
+    position: relative;
+    border-radius: 8px;
+    margin: 6px;
+}
+.modal2-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    
+}
+.modal-header span{
+    background-color: #36FBA1;
+    padding: 0.5rem;
+    border-radius: 5.5px;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.modal-sub-header{
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid #E1E1E1;
+    font-size: 13px;
+    padding: 6px;
+    width: 100%;
+}
+.modal-2 ul{
+    border-bottom: 1px solid #E1E1E1;
+}
+.modal-2 ul li{
+    border-radius: 8px;
+    padding: 6px;
+    margin: 6px;
+    font-size: 13px;
+}
+
+.modal-details{
+    height: 50px;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 6px;
+}
+
+.modal-details h1{
+font-weight: 400;
+font-size: 13px;
+}
+
+.modal-details p{
+font-size: 12px;
+color: #616161;
+}
+
+.setting p{
+    border-radius: 8px;
+    padding: 6px;
+    margin: 6px;
+    font-size: 13px;
+}
+
+.modal-sub-header:hover,.modal-details:hover,.setting p:hover,.modal-2 ul li:hover{
+    background-color: #F7F7F7;
+}
+.mobilesvg{
+    display: none;
+}
+/* MAIN CONTENT */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.pricing{
+    display: flex;
+    width: 800px;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #1A1A1A;
+    color: #E3E3E3;
+    padding: 12px 8px 12px 16px;
+    font-weight: 500;
+    font-size: 13px;
+}
+.remove-pricing{
+    display: none;
+}
+.sub-pricing{
+    display:flex;
+    align-items: center;
+    gap: 17rem;
+}
+.sub-pricing button{
+    padding: 6px 12px 6px 12px ;
+    color: black;
+    border-radius: 6px;
+    background-color: white;
+    font-weight: 500;
+}
+.svg{
+    margin-left: 0.3rem;
+}
+
+
+
+
+.setup{
+    background-color: white;
+    width: 800px;
+    padding: 8px;
+    border-radius: 18px;
+    border: 1px solid #DBDBDB;
+    position: relative;
+}
+.setup-icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.setup-guide{
+    padding: 8px;
+}
+
+.setup-guide h3{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+}
+.setup-guide p{
+    font-weight: 400;
+    font-size: 13px;
+    margin: 5px 0;
+    
+}
+
+.work-done{
+display: flex;
+gap: 6px; 
+align-items: center;
+}
+
+.work-done p{
+    font-size: 12px;
+}
+.progress{
+    position: relative;
+    background-color: #E3E3E3;
+    width: 72px;
+    height: 4px;
+    border-radius: 28px;
+}
+
+.progress-bar{
+    position: absolute;
+    background-color: #1A1A1A;
+    width: 18px;
+    height: 4px;
+    border-radius: 28px;
+}
+
+/* CONTAINER */
+
+.hide-container{
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .mobilesvg{
+        display: block;
+    }
+    .desktopsvg{
+        display: none;
+    }
+    .search input{
+        width: 200px;
+    }
+    .user{
+        padding: 2px;
+    }
+    .user-icon{
+        margin-left: 0;
+    }
+    .user p{
+        display: none;
+    }
+
+    .modal{
+        width: 350px;
+       top: 10%;
+    }
+    .modal-2{
+        
+       top: 10%;
+    }
+
+    .pricing{
+        width: 100%;
+        border-radius: 0;
+    }
+    .sub-pricing{
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+    }
+    .sub-pricing button{
+        margin-top: 1rem;
+    }
+
+    .setup{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+
+
