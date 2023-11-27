@@ -85,6 +85,7 @@ header{
     background-color: #303030;
     border-radius: 8px;
     color: white;
+    outline: #616161;
     
 }
 .search input:hover{
@@ -262,6 +263,9 @@ main{
     background-color: white;
     font-weight: 500;
 }
+.sub-pricing button:hover{
+    background-color: #F7F7F7;
+}
 .svg{
     margin-left: 0.3rem;
 }
@@ -272,7 +276,7 @@ main{
 .setup{
     background-color: white;
     width: 800px;
-    padding: 8px;
+    padding: 8px 8px 10px 8px;
     border-radius: 18px;
     border: 1px solid #DBDBDB;
     position: relative;
@@ -329,7 +333,88 @@ align-items: center;
 .hide-container{
     display: none;
 }
+.item {
+   
+    padding: 8px 8px 0px 8px;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+    margin-top: 0.5rem;
+}
 
+
+.item.active{
+    background-color: white;
+}
+.item .alone{
+    background-color: #F3F3F3;
+}
+
+.icon-container:hover .icon1{
+    display: none;
+}
+.icon-container:hover .icon2{
+    display: block;
+}
+.svg-icon {
+    display: block;
+  }
+
+  .icon2 {
+    display: none;
+  }
+.setup-title{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size:13px;
+    font-weight: 600;
+}
+
+.items .answer{
+    display: flex;
+    gap: 96px;
+}
+.answer p, .answer button{
+    margin-left: 1.7rem;
+}
+.answer p{
+    font-weight: 500;
+    font-size: 13px;
+    color: #616161;
+    margin-top: 16px ;
+    margin-bottom: 16px ;
+}
+.answer p span{
+    font-weight: 500;
+    font-size: 14px;
+    color: #005BD3
+    ;
+}
+
+.answer button{
+    background-color: #404040;
+    color: #F6F3F6;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+.answer button:hover{
+    background-color: black;
+}
+.answer .import{
+    display: flex;
+    align-items: center;
+}
+.answer .import p {
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.item .hide{
+    display: none;
+}
 @media only screen and (max-width: 767px) {
     .mobilesvg{
         display: block;
@@ -376,6 +461,14 @@ align-items: center;
     .setup{
         width: 100%;
         border-radius: 0;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    .item{
+        padding-bottom: 12px;
     }
 }
 

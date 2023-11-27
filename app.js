@@ -58,3 +58,73 @@ arrowBtn.addEventListener('click',function(){
         </svg>`
     }
 })
+
+
+/* ACCORDIAN */
+const accordion = document.querySelectorAll('#item-container')
+
+accordion.forEach((item,index)=>{
+    let title = item.querySelector('.setup-title')
+    title.addEventListener('click',function(){
+        item.classList.toggle('active')
+        let answer = item.querySelector('#answer')
+        if(item.classList.contains('active')){
+            // answer.style.height = `${answer.scrollHeight}px`
+            answer.classList.add('hide')
+           
+        }else{
+            answer.classList.remove('hide')
+        }
+        removeOpen(index)
+       
+    })
+
+    
+})
+
+function removeOpen(index1){
+    accordion.forEach((item2,index2)=>{
+        if(index1 != index2){
+            item2.classList.add('active')
+            
+            let desc = item2.querySelector('#answer')
+            desc.classList.add('hide')
+        }
+    })
+}
+
+
+/* Toggle */
+
+const icon = document.querySelectorAll('#icon-container')
+
+let count = 0
+icon.forEach((element)=>{
+    element.addEventListener('click',function(){
+        const progess = document.getElementById('progress')
+        if(element.classList.contains("count")){
+            count++
+            element.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+            <path
+              d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+              fill="#8A8A8A"
+            ></path>
+          </svg>`
+            console.log(count);
+            element.classList.remove('count')
+            progess.textContent = `${count}/5`
+        }
+        else{
+            count--
+            element.classList.add('count')
+            element.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="#8A8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+          </svg>`
+            console.log(count);
+            progess.textContent = `${count}/5`
+        }
+    })
+    
+    
+})
